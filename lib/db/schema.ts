@@ -39,3 +39,6 @@ export const notes = pgTable("notes", {
     .notNull()
     .default(sql`CURRENT_TIMESTAMP`),
 });
+
+export type Category = typeof categories.$inferSelect;
+export type Note = typeof notes.$inferSelect;
